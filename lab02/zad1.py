@@ -24,7 +24,6 @@ def count_empty(data):
 
 stats = count_empty(numbers_df)
 # print("Items that are '-':", stats[0], "Items that are not a number:", stats[1], "Items that are '0':", stats[2])
-# print("Replaced '-' and NA with 0.")
 numbers_fixed_empty = stats[3]
 
 def replace_out_of_range(data):
