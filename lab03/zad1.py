@@ -5,11 +5,6 @@ df = pd.read_csv("./lab02/iris1.csv")
 
 (train_set, test_set) = train_test_split(df.values, train_size=0.7, random_state=13)
 
-train_inputs = train_set[:, 0:4]
-train_classes = train_set[:, 4]
-test_inputs = test_set[:, 0:4]
-test_classes = test_set[:, 4]
-
 def classify_iris(sl, sw, pl, pw):
     if sl <= 5.7 and 2.3 <= sw and pl <= 1.9 and pw <= 0.6:
         return("Setosa")
