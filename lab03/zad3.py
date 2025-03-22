@@ -32,3 +32,17 @@ nb_accuracy = accuracy_score(test_classes, nb_predictions)
 nb_conf_matrix = confusion_matrix(test_classes, nb_predictions)
 print(f"NB: Dokładność: {accuracy}")
 print(conf_matrix)
+
+"""
+Drzewo decyzyjne z zadania 2 dawało wyniki pomiędzy 91.1% a 100%.
+
+Metoda k-najbliższych sąsiadów daje wyniki:
+dla k=3 95.6%
+dla k=5 91.1%
+dla k=11 93.3%
+
+Metoda Naive Bayes dała wynik 93.3%.
+
+Drzewo decyzyjne jest najbardziej "niestabilne", ale jako jedyne potrafi osiągnąć 100%.
+K-NN oraz NB są "stabilne", gdzie K-NN dla k=3 daje najlepszy wynik (95.6%).
+"""
