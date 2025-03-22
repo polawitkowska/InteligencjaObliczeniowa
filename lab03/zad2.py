@@ -2,7 +2,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import tree
 from sklearn.datasets import load_iris
 import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix
 
 iris = load_iris()
 
@@ -22,19 +22,8 @@ clf = clf.fit(train_inputs, train_classes)
 # plt.show()
 
 predictions = clf.predict(test_inputs)
-
-def accuracy():
-    good_predictions = 0
-    length = len(test_classes)
-
-    for i in range(length):
-        if predictions[i] == test_classes[i]:
-            good_predictions = good_predictions + 1
-
-    print(good_predictions) #43
-    print(good_predictions/length*100, "%") #95.6%
-
-accuracy()
+accuracy = accuracy_score(test_classes, predictions)
+print(accuracy) # 0.9555555555555556 czyli 95.6%
 
 cm = confusion_matrix(test_classes, predictions)
 print(cm)
