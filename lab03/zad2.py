@@ -23,7 +23,7 @@ clf = clf.fit(train_inputs, train_classes)
 
 predictions = clf.predict(test_inputs)
 accuracy = accuracy_score(test_classes, predictions)
-print(accuracy) # 0.9555555555555556 czyli 95.6%
+print(f"Dokładność: {accuracy}") # skacze między 91.1%, 93.3%, 95.6% a 100% (od 0 do 3 błędów)
 
 cm = confusion_matrix(test_classes, predictions)
 print(cm)
