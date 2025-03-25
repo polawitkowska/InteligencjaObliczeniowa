@@ -19,7 +19,8 @@ test_inputs = scaler.transform(test_inputs)
 
 clf = MLPClassifier(hidden_layer_sizes=(6, 3), 
                     activation='relu',
-                    max_iter=500)
+                    max_iter=500,
+                    random_state=13)
 
 clf.fit(train_inputs, train_classes)
 
@@ -31,5 +32,5 @@ print(accuracy)
 print(cm)
 
 """
-Dokładność 75% :(
+Dokładność 73% :(
 """
