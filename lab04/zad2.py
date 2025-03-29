@@ -23,5 +23,10 @@ print(cm)
 
 """
 hidden_layer_sizes = (2) oraz (3) daje dokładność 26.7%
+
+
 hidden_layer_sizes = (3, 3) daje dokładność 97.8%
+[[14  0  0]
+ [ 0 12  0]
+ [ 0  1 18]]
 """
