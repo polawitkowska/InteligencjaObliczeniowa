@@ -14,19 +14,21 @@ W kodowaniu one-hot każda kategoria jest reprezentowana jako wektor binarny, w 
 3. Model ma 4 warstwy: wejściową, dwie ukryte warstwy z 64 neuronami każda i warstwę wyjściową. Ile
 neuronów ma warstwa wejściowa i co oznacza X_train.shape[1]? Ile neuronów ma warstwa wyjściowa i co
 oznacza y_encoded.shape[1]?
-???
 
 4. Czy funkcja aktywacji relu jest najlepsza do tego zadania? Spróbuj użyć innej funkcji i obejrzyj wyniki
 
 
-e) Model jest konfigurowany do treningu za pomocą polecenia compile. Tutaj wybieramy optymalizator (algorytm,
+5. Model jest konfigurowany do treningu za pomocą polecenia compile. Tutaj wybieramy optymalizator (algorytm,
 który używa gradientu straty do aktualizacji wag), funkcję straty, metrykę do oceny modelu. Eksperymentuj ze
 zmianą tych parametrów na inne i uruchom program. Czy różne optymalizatory lub funkcje straty dają różne
 wyniki? Czy możemy dostosować szybkość uczenia się w optymalizatorze?
-f) W linii model.fit sieć neuronowa jest trenowana. Czy jest sposób, by zmodyfikować tę linię tak, aby rozmiar
+
+6. W linii model.fit sieć neuronowa jest trenowana. Czy jest sposób, by zmodyfikować tę linię tak, aby rozmiar
 partii był równy 4 lub 8 lub 16? Jak wyglądają krzywe uczenia się dla różnych parametrów? Jak zmiana partii
 wpływa na kształt krzywych? Wypróbuj różne wartości i uruchom program.
-g) Co możesz powiedzieć o wydajności sieci neuronowej na podstawie krzywych uczenia? W której epoce sieć
+
+7. Co możesz powiedzieć o wydajności sieci neuronowej na podstawie krzywych uczenia? W której epoce sieć
 osiągnęła najlepszą wydajność? Czy ta krzywa sugeruje dobrze dopasowany model, czy mamy do czynienia z
 niedouczeniem lub przeuczeniem?
-h) Przejrzyj niżej wymieniony kod i wyjaśnij co się w nim dzieje
+
+8. Przejrzyj niżej wymieniony kod i wyjaśnij co się w nim dzieje
