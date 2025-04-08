@@ -52,7 +52,7 @@ for i in range(10):
     if solution_fitness == best_value:
         how_many_good += 1
 
-print("Good solutions (solution_fitness = 1630): {:.1f}%".format((how_many_good/10)*100), how_many_good)
+print("Good solutions (solution_fitness = 1630): {:.1f}%".format((how_many_good/10)*100)) # 60% - 100%
 
 
 # print("Parameters of the best solution : {solution}".format(solution=solution))
