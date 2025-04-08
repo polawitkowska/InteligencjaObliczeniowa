@@ -21,10 +21,9 @@ sol_per_pop = 10
 num_genes = len(weights)
 
 num_parents_mating = 5
-num_generations = 30
+num_generations = 100
 keep_parents = 2
 
-#jaki typ selekcji rodzicow?
 #sss = steady, rws=roulette, rank = rankingowa, tournament = turniejowa
 parent_selection_type = "sss"
 
@@ -34,26 +33,28 @@ mutation_type = "random"
 mutation_percent_genes = 8
 
 ga_instance = pygad.GA(gene_space=gene_space,
-                       num_generations=num_generations,
-                       num_parents_mating=num_parents_mating,
-                       fitness_func=fitness_func,
-                       sol_per_pop=sol_per_pop,
-                       num_genes=num_genes,
-                       parent_selection_type=parent_selection_type,
-                       keep_parents=keep_parents,
-                       crossover_type=crossover_type,
-                       mutation_type=mutation_type,
-                       mutation_percent_genes=mutation_percent_genes)
+                    num_generations=num_generations,
+                    num_parents_mating=num_parents_mating,
+                    fitness_func=fitness_func,
+                    sol_per_pop=sol_per_pop,
+                    num_genes=num_genes,
+                    parent_selection_type=parent_selection_type,
+                    keep_parents=keep_parents,
+                    crossover_type=crossover_type,
+                    mutation_type=mutation_type,
+                    mutation_percent_genes=mutation_percent_genes)
 
-ga_instance.run()
+how_many_good = 0
+for i in range(10):
+    ga_instance.run()
 
-solution, solution_fitness, solution_idx = ga_instance.best_solution()
-print("Parameters of the best solution : {solution}".format(solution=solution))
-print("Fitness value of the best solution = {solution_fitness}".format(solution_fitness=solution_fitness))
+    solution, solution_fitness, solution_idx = ga_instance.best_solution()
+    if solution_fitness == best_value:
+        how_many_good += 1
 
-selected_weight = numpy.sum(weights*solution)
-selected_value = numpy.sum(values*solution)
-print(f"Selected items total weight: {selected_weight}")
-print(f"Selected items total value: {selected_value}")
+print("Good solutions (solution_fitness = 1630): {:.1f}%".format((how_many_good/10)*100), how_many_good)
 
-ga_instance.plot_fitness()
+
+# print("Parameters of the best solution : {solution}".format(solution=solution))
+# print("Fitness value of the best solution = {solution_fitness}".format(solution_fitness=solution_fitness))
+# ga_instance.plot_fitness()
