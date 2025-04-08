@@ -1,6 +1,5 @@
 import pygad
 import math
-import numpy
 
 def endurance(x, y, z, u, v, w):
     return math.exp(-2*(y-math.sin(x))**2)+math.sin(z*u)+math.cos(v*w)
@@ -42,3 +41,8 @@ solution, solution_fitness, solution_idx = ga_instance.best_solution()
 print("Parameters of the best solution : {solution}".format(solution=solution))
 print("Fitness value of the best solution = {solution_fitness}".format(solution_fitness=solution_fitness))
 ga_instance.plot_fitness()
+
+"""
+Parameters of the best solution : [0.11647328 0.11617222 0.99747224 0.99978212 0.00439268 0.01817104]
+Fitness value of the best solution = 2.839984628572151
+"""
