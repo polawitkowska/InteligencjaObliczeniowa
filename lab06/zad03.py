@@ -1,6 +1,4 @@
 import pygad
-import math
-import numpy
 
 labirynth = [
     [0, 0, 1, 1, 1],
@@ -11,7 +9,6 @@ labirynth = [
 ]
 max_moves = 30
 gene_space = [0, 1, 2, 3]
-
 
 def fitness_func(model, solution, solution_idx):
     start_x, start_y = 0, 0
@@ -41,6 +38,8 @@ def fitness_func(model, solution, solution_idx):
         if (current_x, current_y) != (prev_x, prev_y) and (current_x, current_y) not in visited:
             moves += 1
             visited.add((current_x, current_y))
+        elif (current_x, current_y) in visited:
+            current_x, current_y = prev_x, prev_y
 
     distance = abs(current_x - end_x) + abs(current_y - end_y)
 
