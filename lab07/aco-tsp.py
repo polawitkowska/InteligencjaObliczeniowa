@@ -5,7 +5,41 @@ import random
 
 plt.style.use("dark_background")
 
-COORDS = [(random.randint(0, 100), random.randint(0, 100)) for _ in range(50)]
+COORDS = [
+    (20, 52),
+    (43, 50),
+    (20, 84),
+    (70, 65),
+    (29, 90),
+    (87, 83),
+    (73, 23),
+    (30, 21),
+    (20, 42),
+    (1, 48),
+    (27, 43),
+    (20, 19),
+    (10, 21),
+    (30, 50),
+    (3, 5),
+    (87, 30),
+    (65, 40),
+    (16, 21),
+    (33, 15),
+    (22, 11),
+    (20, 31),
+    (18, 49),
+    (44, 30),
+    (2, 6),
+    (76, 76),
+    (56, 12),
+    (61, 32),
+    (8, 18),
+    (19, 8),
+    (16, 20),
+    (48, 31),
+    (49, 49),
+    (2, 19)
+]
 
 def random_coord():
     r = random.randint(0, len(COORDS))
@@ -28,7 +62,8 @@ plot_nodes()
 
 colony = AntColony(COORDS, ant_count=300, alpha=0.5, beta=1.2, 
                     pheromone_evaporation_rate=0.40, pheromone_constant=1000.0,
-                    iterations=300)
+                    iterations=300) #wzrost mrówek spowalnia program, ale daje lepsze wyniki
+# wzrost alpha i beta przyspiesza program ale zmniejsza dokładność
 
 optimal_nodes = colony.get_path()
 
