@@ -5,7 +5,7 @@ from collections import Counter
 import wordcloud
 import matplotlib.pyplot as plt
 
-with open('./lab08/article.txt', 'r', encoding='utf-8') as file:
+with open('./lab08/zad01/article.txt', 'r', encoding='utf-8') as file:
     article = file.read()
 
 tokens = word_tokenize(article)
@@ -41,7 +41,7 @@ word_counts = Counter(lemmatized_article)
 # plt.show()
 
 # Word Cloud
-# with open('./lab08/lemmantized_article.txt', 'r', encoding='utf-8') as file:
+# with open('./lab08/zad01/lemmantized_article.txt', 'r', encoding='utf-8') as file:
 #     lemmatized_article_txt = file.read()
 # wordcloud = wordcloud.WordCloud(max_words=100, background_color="white").generate(lemmatized_article_txt)
 
