@@ -2,12 +2,12 @@
 import sys
 import numpy as np
 from nltk.tokenize import wordpunct_tokenize
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Dropout
-from tensorflow.keras.layers import LSTM
-from tensorflow.keras.callbacks import ModelCheckpoint
-from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import Dense # type: ignore
+from tensorflow.keras.layers import Dropout # type: ignore
+from tensorflow.keras.layers import LSTM # type: ignore
+from tensorflow.keras.callbacks import ModelCheckpoint # type: ignore
+from tensorflow.keras.utils import to_categorical # type: ignore
 # load ascii text and covert to lowercase
 filename = "wonderland.txt"
 raw_text = open(filename, 'r', encoding='utf-8').read()
