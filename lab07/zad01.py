@@ -5,7 +5,6 @@ import math
 from pyswarms.utils.plotters import plot_cost_history
 import matplotlib.pyplot as plt
 
-
 def endurance(args):
     x, y, z, u, v, w = args
     return math.exp(-2*(y-math.sin(x))**2)+math.sin(z*u)+math.cos(v*w)
